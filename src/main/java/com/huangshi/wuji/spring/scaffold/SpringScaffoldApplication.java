@@ -18,9 +18,11 @@ public class SpringScaffoldApplication {
 	public static final Logger logger = LoggerFactory.getLogger(SpringScaffoldApplication.class);
 
 	public static void main(String[] args) {
+		System.out.println("The service is to start.");
 		ConfigurableApplicationContext ctx = SpringApplication.run(SpringScaffoldApplication.class, args);
 		HelloService hello = ctx.getBean(HelloService.class);
 		logger.info(hello.sayHello());
+		System.out.println("The service has started.");
 	}
 
 
