@@ -14,9 +14,19 @@ public class PropertySourceExample {
                 new AnnotationConfigApplicationContext(PropertySourceExample.class);
         ConfigurableEnvironment env = context.getEnvironment();
         String property = env.getProperty("newPropertityAddedByMarco");
-        System.out.println("some-strProp value is " + property);
+        System.out.println("newPropertityAddedByMarco value is " + property);
 
+        printSources(env);
         //printing all sources
         System.out.println(env.getPropertySources());
+    }
+
+
+    private static void printSources (ConfigurableEnvironment env) {
+        System.out.println("---- property sources ----");
+        for (org.springframework.core.env.PropertySource<?> propertySource : env.getPropertySources()) {
+            System.out.println("name =  " + propertySource.getName() + "\nsource = " + propertySource
+                    .getSource().getClass()+"\n");
+        }
     }
 }
