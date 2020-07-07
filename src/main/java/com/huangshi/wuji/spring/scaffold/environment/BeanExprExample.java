@@ -17,8 +17,12 @@ public class BeanExprExample {
     }
 
     public static class MyBean {
-        @Value("#{app.properties['newPropertityAddedByMarco']}")
+        //Spring EL表达式应该应用下面被注释掉的这行，之所以注释掉是因为底下的EL路径没有匹配上
+        //为了能让项目正常运行，所以注释掉了，如果用EL，请改回并取消23行
+//        @Value("#{app.properties['newPropertityAddedByMarco']}")
+        @Value("${newPropertityAddedByMarco:defaultValue}")
         private String userHome;
+
 
         public void showProp () {
             System.out.println(userHome);
