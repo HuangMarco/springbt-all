@@ -9,10 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
 
 	public static final Logger logger = LoggerFactory.getLogger(SpringScaffoldApplication.class);

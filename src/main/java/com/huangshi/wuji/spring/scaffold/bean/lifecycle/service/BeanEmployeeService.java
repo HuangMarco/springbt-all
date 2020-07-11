@@ -1,23 +1,22 @@
 package com.huangshi.wuji.spring.scaffold.bean.lifecycle.service;
 
-import com.huangshi.wuji.spring.scaffold.bean.lifecycle.model.Employee;
+import com.huangshi.wuji.spring.scaffold.bean.lifecycle.model.BeanEmployee;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Setter
 @Getter
 @Service
-public class EmployeeService implements InitializingBean, DisposableBean {
+public class BeanEmployeeService implements InitializingBean, DisposableBean {
 
     @Autowired
-    private Employee employee;
+    private BeanEmployee employee;
 
-    public EmployeeService(){
+    public BeanEmployeeService(){
         System.out.println("EmployeeService no-args constructor called");
     }
 

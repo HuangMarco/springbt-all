@@ -1,7 +1,5 @@
 package com.huangshi.wuji.spring.scaffold.bean.lifecycle;
 
-import com.huangshi.wuji.spring.scaffold.bean.lifecycle.model.Employee;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

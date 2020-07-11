@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Component
-public class Employee {
+public class BeanEmployee {
 
     private String name;
 

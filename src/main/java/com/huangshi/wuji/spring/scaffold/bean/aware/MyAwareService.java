@@ -63,8 +63,7 @@ public class MyAwareService implements ApplicationContextAware,
     @Override
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
         System.out.println("setBeanFactory called");
-        System.out.println("setBeanFactory:: employee bean singleton="
-                + beanFactory.isSingleton("employee"));
+//        System.out.println("setBeanFactory:: employee bean singleton=" + beanFactory.isSingleton("BeanEmployee"));
     }
 
     @Override
