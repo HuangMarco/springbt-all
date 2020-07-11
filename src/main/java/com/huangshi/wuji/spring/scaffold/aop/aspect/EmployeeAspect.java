@@ -12,7 +12,7 @@ public class EmployeeAspect {
     }
 
     //所有com.huangshi.wuji.spring.scaffold.aop.service目录下的所有get打头的方法执行前都会被执行getAllAdvice方法
-    @Before("execution(* com.huangshi.wuji.spring.scaffold.aop.service.*.get*())")
+    @Before("execution(* com.huangshi.wuji.spring.scaffold.aop.service..get*())")
     public void getAllAdvice(){
         System.out.println("Service method getter called");
     }

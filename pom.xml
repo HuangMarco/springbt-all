@@ -87,7 +87,6 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.9</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<!--Spring AOP-->

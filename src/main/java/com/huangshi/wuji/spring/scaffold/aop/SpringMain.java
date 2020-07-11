@@ -19,6 +19,7 @@ public class SpringMain {
 
 //        employeeService.setEmployee(employee);
         System.out.println(employeeService.toString());
+        System.out.println(employeeService.getEmployee());
         System.out.println(employeeService.getEmployee().getName());
 
         employeeService.getEmployee().setName("Pankaj");
