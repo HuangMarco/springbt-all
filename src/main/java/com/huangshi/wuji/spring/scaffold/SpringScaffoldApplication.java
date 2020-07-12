@@ -1,8 +1,10 @@
 package com.huangshi.wuji.spring.scaffold;
 
 import com.huangshi.wuji.spring.scaffold.commandlinerunner.service.HelloService;
+import com.huangshi.wuji.spring.scaffold.performance.logging.service.PerformanceEmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,6 +29,8 @@ public class SpringScaffoldApplication {
 		System.out.println("The service has started.");
 	}
 
+	@Autowired
+	private PerformanceEmployeeService performanceEmployeeService;
 
 	@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
@@ -39,6 +43,12 @@ public class SpringScaffoldApplication {
 			for (String beanName : beanNames) {
 				System.out.println(beanName);
 			}
+
+			logger.info("Start to deal with Performance Logging time calculation exmaple...");
+
+			System.out.println(performanceEmployeeService.getEmployeeById(1L));
+
+			logger.info("End of deal with Performance Logging time calculation exmaple...");
 
 		};
 	}
