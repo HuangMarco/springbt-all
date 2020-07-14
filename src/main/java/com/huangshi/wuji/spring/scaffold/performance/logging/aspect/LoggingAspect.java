@@ -17,7 +17,8 @@ public class LoggingAspect {
     private static final Logger log = LoggerFactory.getLogger(LoggingAspect.class);
 
     //AOP expression for which methods shall be intercepted
-    @Around("execution(* com.huangshi.wuji.spring.scaffold..*(..)))")
+    // ********************************* uncomment below to activate the ascpet *********************************
+//    @Around("execution(* com.huangshi.wuji.spring.scaffold..*(..)))")
     public Object profileAllMethods(ProceedingJoinPoint proceedingJoinPoint) throws Throwable
     {
         MethodSignature methodSignature = (MethodSignature) proceedingJoinPoint.getSignature();
