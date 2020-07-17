@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class EmployeeServiceAspect {
 
     //  ********************************* uncomment below to activate the aspect  *********************************
-//    @Before(value = "execution(* com.huangshi.wuji.spring.scaffold.rest.aop.service..*(..)) and args(name,empId)")
+//    @Before(value = "execution(* com.huangshi.wuji.spring.scaffold.controller.aop.service..*(..)) and args(name,empId)")
     public void beforeAdvice(JoinPoint joinPoint, String name, String empId) {
         System.out.println("Before method:" + joinPoint.getSignature());
 
@@ -20,7 +20,7 @@ public class EmployeeServiceAspect {
     }
 
     //  ********************************* uncomment below to activate the aspect  *********************************
-//    @After(value = "execution(* com.huangshi.wuji.spring.scaffold.rest.aop.service..*(..)) and args(name,empId)")
+//    @After(value = "execution(* com.huangshi.wuji.spring.scaffold.controller.aop.service..*(..)) and args(name,empId)")
     public void afterAdvice(JoinPoint joinPoint, String name, String empId) {
         System.out.println("After method:" + joinPoint.getSignature());
 
