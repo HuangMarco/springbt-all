@@ -14,7 +14,7 @@ public class BeanConfig2 {
     //如果WindowsCondition的实现方法返回true，则注入这个bean
 
     @Conditional({WindowsCondition.class})
-    @Bean(name = "bill")
+    @Bean(name = "billt")
     public Person person1(){
         return new Person("Bill Gates",62);
     }

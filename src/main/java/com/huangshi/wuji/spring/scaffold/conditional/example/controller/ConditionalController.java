@@ -17,8 +17,9 @@ public class ConditionalController {
     @RequestMapping(value = "/query/conditional", method = RequestMethod.GET)
     public String queryConditonal(){
         System.out.println(System.getenv("os.name"));
-        Person p = (Person)context.getBean("bill");
-        return p.getName();
+//        System.out.println(((Person)context.getBean("linus")).getName());
+        Person p = (Person)context.getBean("billt");
+        return p.getName()+p.getAge();
     }
 
 
