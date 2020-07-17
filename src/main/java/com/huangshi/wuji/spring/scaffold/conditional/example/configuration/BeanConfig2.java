@@ -16,14 +16,14 @@ public class BeanConfig2 {
     @Conditional({WindowsCondition.class})
     @Bean(name = "bill")
     public Person person1(){
-        return new Person("Bill Gates",62,"beconfig2test");
+        return new Person("Bill Gates",62);
     }
 
     //如果LinuxCondition的实现方法返回true，则注入这个bean
     @Conditional({LinuxCondition.class})
     @Bean("linus")
     public Person person2(){
-        return new Person("Linus",48,"beconfig2test");
+        return new Person("Linus",48);
     }
 
 

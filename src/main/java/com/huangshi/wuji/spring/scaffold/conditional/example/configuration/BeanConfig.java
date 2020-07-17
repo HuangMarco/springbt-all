@@ -9,11 +9,11 @@ public class BeanConfig {
 
     @Bean(name = "bill1")
     public Person person1(){
-        return new Person("Bill Gates",62,"beconfig1test");
+        return new Person("Bill Gates",62);
     }
 
     @Bean("linus1")
     public Person person2(){
-        return new Person("Linus",48,"beconfig1test");
+        return new Person("Linus",48);
     }
 }
