@@ -9,8 +9,8 @@ import java.util.Map;
 public class ConditionalTest2 {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig2.class);
-
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig2.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Person.class);
         String osName = context.getEnvironment().getProperty("os.name");
         System.out.println("当前系统为：" + osName);
         Map<String, Person> map = context.getBeansOfType(Person.class);

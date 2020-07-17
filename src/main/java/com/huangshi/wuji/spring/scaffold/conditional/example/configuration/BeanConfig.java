@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfig {
 
-    @Bean(name = "bill")
+    @Bean(name = "bill1")
     public Person person1(){
-        return new Person("Bill Gates",62);
+        return new Person("Bill Gates",62,"beconfig1test");
     }
 
-    @Bean("linus")
+    @Bean("linus1")
     public Person person2(){
-        return new Person("Linus",48);
+        return new Person("Linus",48,"beconfig1test");
     }
 }

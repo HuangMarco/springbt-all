@@ -12,17 +12,18 @@ public class BeanConfig2 {
 
     //只有一个类时，大括号可以省略
     //如果WindowsCondition的实现方法返回true，则注入这个bean
+
     @Conditional({WindowsCondition.class})
     @Bean(name = "bill")
     public Person person1(){
-        return new Person("Bill Gates",62);
+        return new Person("Bill Gates",62,"beconfig2test");
     }
 
     //如果LinuxCondition的实现方法返回true，则注入这个bean
     @Conditional({LinuxCondition.class})
     @Bean("linus")
     public Person person2(){
-        return new Person("Linus",48);
+        return new Person("Linus",48,"beconfig2test");
     }
 
 
