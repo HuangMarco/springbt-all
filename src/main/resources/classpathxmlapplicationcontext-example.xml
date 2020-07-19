@@ -9,4 +9,18 @@
         <property name="name" value="Tom"/>
     </bean>
 
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename">
+                <value>resourcesbundle/dialog</value>
+        </property>
+    </bean>
+
+
+    <bean id="math" class="com.huangshi.wuji.spring.scaffold.applicationcontext.model.Course">
+        <property name="name" value="math"/>
+    </bean>
+
+    <bean name="teacher" class="com.huangshi.wuji.spring.scaffold.applicationcontext.model.Teacher"/>
+
 </beans>
