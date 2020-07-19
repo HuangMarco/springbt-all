@@ -18,6 +18,7 @@ public class BeanFactoryPostProcessorExample {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(BeanFactoryPostProcessorConfig.class);
         BeanFactoryPostProcessorExampleBean bean = context.getBean(BeanFactoryPostProcessorExampleBean.class);
+        System.out.println(context.getBean("AnotherBeanFactoryPostProcessorExampleBean"));
         bean.doSomething();
     }
 

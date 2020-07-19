@@ -55,7 +55,7 @@ public class SpringScaffoldApplication {
 		};
 	}
 
-	
+
 //	@Bean(initMethod="start")
 //	BenzCar benzCar(Engine engine){
 //		BenzCar car = new BenzCar();
