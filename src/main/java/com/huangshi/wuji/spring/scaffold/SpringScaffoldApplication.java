@@ -1,5 +1,8 @@
 package com.huangshi.wuji.spring.scaffold;
 
+import com.huangshi.wuji.spring.scaffold.beanfactorypostprocessor.example1.model.BenzCar;
+import com.huangshi.wuji.spring.scaffold.beanfactorypostprocessor.example1.model.Engine;
+import com.huangshi.wuji.spring.scaffold.beanfactorypostprocessor.example1.proxy.SpecialBeanForEngine;
 import com.huangshi.wuji.spring.scaffold.commandlinerunner.service.HelloService;
 import com.huangshi.wuji.spring.scaffold.performance.logging.service.PerformanceEmployeeService;
 import org.slf4j.Logger;
@@ -11,12 +14,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.Arrays;
 
 @SpringBootApplication
-@EnableAspectJAutoProxy(proxyTargetClass=true)
+//@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
 
 	public static final Logger logger = LoggerFactory.getLogger(SpringScaffoldApplication.class);
@@ -52,4 +54,18 @@ public class SpringScaffoldApplication {
 
 		};
 	}
+
+	
+//	@Bean(initMethod="start")
+//	BenzCar benzCar(Engine engine){
+//		BenzCar car = new BenzCar();
+//		car.engine = engine;
+//		return car ;
+//	}
+//
+//	@Bean
+//	SpecialBeanForEngine specialBeanForEngine(){
+//		return new SpecialBeanForEngine();
+//	}
+
 }
