@@ -25,6 +25,7 @@ public class SpringScaffoldApplication {
 
 	public static void main(String[] args) {
 		System.out.println("The service is to start.");
+//		SpringApplication.run(SpringScaffoldApplication.class, args);
 		ConfigurableApplicationContext ctx = SpringApplication.run(SpringScaffoldApplication.class, args);
 		HelloService hello = ctx.getBean(HelloService.class);
 		logger.info(hello.sayHello());

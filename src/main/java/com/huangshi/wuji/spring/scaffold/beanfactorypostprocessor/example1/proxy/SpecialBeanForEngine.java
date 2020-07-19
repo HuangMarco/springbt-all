@@ -63,7 +63,7 @@ public class SpecialBeanForEngine implements BeanFactoryPostProcessor, BeanNameA
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             System.out.println("here is invoke  engine:"+method.getName());
-            return null;
+            return proxy;
         }
     }
 
