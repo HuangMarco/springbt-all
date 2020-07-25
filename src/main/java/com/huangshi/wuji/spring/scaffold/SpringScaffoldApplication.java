@@ -5,6 +5,7 @@ import com.huangshi.wuji.spring.scaffold.beanfactorypostprocessor.example1.model
 import com.huangshi.wuji.spring.scaffold.beanfactorypostprocessor.example1.proxy.SpecialBeanForEngine;
 import com.huangshi.wuji.spring.scaffold.commandlinerunner.service.HelloService;
 import com.huangshi.wuji.spring.scaffold.performance.logging.service.PerformanceEmployeeService;
+import com.huangshi.wuji.spring.scaffold.profile.config.YamlConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,10 @@ import java.util.Arrays;
 @SpringBootApplication
 //@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
+
+	// For profile configuration
+	@Autowired
+	private YamlConfig config;
 
 	public static final Logger logger = LoggerFactory.getLogger(SpringScaffoldApplication.class);
 
@@ -52,6 +57,14 @@ public class SpringScaffoldApplication {
 			System.out.println(performanceEmployeeService.getEmployeeById(1L));
 
 			logger.info("End of deal with Performance Logging time calculation exmaple...");
+
+
+			/**
+			 * For Yaml Config: D:\git\springbt-all\src\main\java\com\huangshi\wuji\spring\scaffold\profile\config\YamlConfig.java
+			 */
+			System.out.println("Testing profile by using environment: " + config.getEnvironment());
+			System.out.println("Testing profile using name: " + config.getName());
+			System.out.println("Testing profile using servers: " + config.getServers());
 
 		};
 	}
