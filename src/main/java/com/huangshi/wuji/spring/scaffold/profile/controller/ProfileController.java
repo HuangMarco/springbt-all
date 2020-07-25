@@ -1,6 +1,7 @@
 package com.huangshi.wuji.spring.scaffold.profile.controller;
 
 import com.huangshi.wuji.spring.scaffold.constants.SBScaffoldConstants;
+import com.huangshi.wuji.spring.scaffold.profile.config.ServerProperties;
 import com.huangshi.wuji.spring.scaffold.profile.model.ProfileCity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,6 +19,9 @@ public class ProfileController {
     @Autowired
     private ProfileCity city;
 
+    @Autowired
+    private ServerProperties server;
+
     @RequestMapping(value = "/query", method = RequestMethod.GET)
     public String getEnvironment(){
         return "current application environment is::::" + environment;
@@ -26,6 +30,17 @@ public class ProfileController {
     @RequestMapping(value = "/query/city", method = RequestMethod.GET)
     public String getCity(){
         return "current city is::::" + city.getName()+city.getCode();
+    }
+
+    @RequestMapping(value = "/query/server", method = RequestMethod.GET)
+    public String getServer(){
+        StringBuilder sb = new StringBuilder("\"current server is::::\"");
+        sb.append(server.getUrl());
+        sb.append("-");
+        sb.append(server.getApp().getName());
+        sb.append("-");
+        sb.append(server.getApp().getUsers());
+        return  sb.toString();
     }
 
 
