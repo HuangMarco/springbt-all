@@ -22,7 +22,7 @@ import java.util.Arrays;
 //@EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
 
-	// For profile configuration
+	//For profile configuration
 	@Autowired
 	private YamlConfig config;
 

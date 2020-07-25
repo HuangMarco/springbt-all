@@ -1,16 +1,37 @@
 spring:
-  profiles: test
-name: test-YAML
-environment: test
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+name: developmentYaml
+app:
+  environment: development
+server:
+  url: http://myDevapp.org
+  app:
+    name: MyDevApplication
+    threadCount: 10
+    users:
+      - Marco
+      - James
 servers:
   - www.abc.test.com
   - www.xyz.test.com
-
 ---
 spring:
   profiles: prod
-name: prod-YAML
-environment: production
+name: productionYaml
+app:
+  environment: production
+server:
+  url: http://myProductapp.org
+  app:
+    name: MyProdApplication
+    threadCount: 10
+    users:
+      - Marco
+      - Cola
 servers:
   - www.abc.com
   - www.xyz.com
