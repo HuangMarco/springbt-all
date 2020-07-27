@@ -1,6 +1,7 @@
 package com.huangshi.wuji.spring.scaffold.rest.aop.controller;
 
 
+import com.huangshi.wuji.spring.scaffold.constants.SBScaffoldConstants;
 import com.huangshi.wuji.spring.scaffold.rest.aop.model.RestEmployee;
 import com.huangshi.wuji.spring.scaffold.rest.aop.service.RestEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class EmployeeController {
+@RequestMapping(SBScaffoldConstants.API_SB_AOP)
+public class SpringBootAopController {
 
     @Autowired
     private RestEmployeeService employeeService;
