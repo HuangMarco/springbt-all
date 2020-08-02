@@ -20,6 +20,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableAsync
 @EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
 

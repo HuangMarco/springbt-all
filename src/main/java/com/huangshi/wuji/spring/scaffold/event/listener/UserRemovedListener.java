@@ -4,6 +4,7 @@ import com.huangshi.wuji.spring.scaffold.event.UserCreatedEvent;
 import com.huangshi.wuji.spring.scaffold.event.event.AfterUserRemovedEvent;
 import com.huangshi.wuji.spring.scaffold.event.event.UserRemovedEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,6 +14,7 @@ public class UserRemovedListener {
      * 创建用户创建事件
      * @param userCreateEvent
      */
+    @Async
     @EventListener
     public void handleUserCreateEvent(UserCreatedEvent userCreateEvent) {
         System.out.println(">>>>>>>>>创建用户事件>>>>>>>>>>>>>>>>>>>>>>>>>>>");
