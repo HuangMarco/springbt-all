@@ -6,4 +6,5 @@ public class SBScaffoldConstants {
     public static final String API_Environment_Post_Processor = "/api/environmentpostprocessor";
     public static final String API_Profile = "/api/profile";
     public static final String API_SB_AOP = "/api/sbaop";
+    public static final String API_Event = "/api/event";
 }
