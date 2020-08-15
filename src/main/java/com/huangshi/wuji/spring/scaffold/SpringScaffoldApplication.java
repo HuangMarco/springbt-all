@@ -16,11 +16,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.util.Arrays;
 
 @SpringBootApplication
-@EnableAsync
+//@EnableAsync
 @EnableAspectJAutoProxy(proxyTargetClass=true)
 public class SpringScaffoldApplication {
 

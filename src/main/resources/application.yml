@@ -5,6 +5,11 @@ spring:
 spring:
   profiles: dev
 name: developmentYaml
+datasource:
+  url: jdbc:postgresql://localhost:5432/sb-all #createDatabaseIfNotExist=true for mysql
+  username: postgres
+  password: 123456
+  driver-class-name: "org.postgresql.Driver" # MYSQL: com.mysql.jdbc.Driver
 app:
   environment: development
 server:
