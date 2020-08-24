@@ -53,7 +53,7 @@ public class AvoidIfElse {
 
         functionMap.get("Huang").apply("Huang");
         functionMap.get("Wang").apply("Wang");
-        
+
         //使用Optional
         Optional<UserFoo> op = Optional.ofNullable(userFoo);
 

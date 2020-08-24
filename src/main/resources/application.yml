@@ -4,6 +4,11 @@ spring:
 ---
 spring:
   profiles: dev
+  session:
+    store-type: redis
+  redis:
+    host: 192.168.3.17
+    port: 6379
 name: developmentYaml
 datasource:
   url: jdbc:postgresql://localhost:5432/sb-all #createDatabaseIfNotExist=true for mysql
