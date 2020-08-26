@@ -1,0 +1,12 @@
+
+POST http://192.168.3.17:8080/auth/realms/master/protocol/openid-connect/token
+Content-Type: application/json
+Accept: application/json
+
+{
+  "client_id": "newClient",
+  "username": "marco",
+  "password": "123456",
+  "grant_type": "password"
+}
+###

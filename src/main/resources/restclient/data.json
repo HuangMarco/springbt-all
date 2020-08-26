@@ -1,0 +1,6 @@
+{
+  "client_id": "newClient",
+  "username": "marco",
+  "password": "123456",
+  "grant_type": "password"
+}
